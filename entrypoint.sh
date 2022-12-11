@@ -1,7 +1,5 @@
 #!/bin/sh
 
-set -euxo pipefail
-
 set -e
 #set -x
 #set -v
