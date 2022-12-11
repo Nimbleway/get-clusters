@@ -10,3 +10,4 @@ set -e
  RESULT=$(jq -n '$ARGS.positional' --args "${MODIFY[@]}")
  echo $RESULT
  echo "names=$(echo $RESULT)" >> $GITHUB_OUTPUT
+ echo 0
