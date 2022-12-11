@@ -1,15 +1,15 @@
 #!/bin/sh
 
-set -e
-#set -x
-#set -v
+#set -e
+set -x
+set -v
  CLUSTERS=$(doctl kubernetes cluster list --format Name,Tags |grep ${CLUSTER_NAME} |cut -d ' ' -f1)
  #NEW=$(echo $CLUSTERS|tr '\n' ' ')
 
  IFS=$'\n' read -r -d '' -a MODIFY <<< $CLUSTERS
  
- echo ${MODIFY[0]}
- echo ${MODIFY[1]}
+# echo ${MODIFY[0]}
+ #echo ${MODIFY[1]}
  
  RESULT=$(jq -n '$ARGS.positional' --args "${MODIFY[@]}")
  echo $RESULT
