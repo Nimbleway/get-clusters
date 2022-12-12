@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CLUSTERS=$(doctl kubernetes cluster list --format Name,Tags |grep ${CLUSTER_NAME} |cut -d ' ' -f1)
+CLUSTERS=$(doctl kubernetes cluster list --format Name,Tags | grep ${ENVIRONMENT} |grep ${CLUSTER_NAME} |cut -d ' ' -f1)
 IFS=$'\n' read -r -d '' -a MODIFY <<< $CLUSTERS
 RESULT=$(jq -n '$ARGS.positional' --args "${MODIFY[@]}")
 echo $RESULT
