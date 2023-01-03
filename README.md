@@ -10,3 +10,7 @@ This will be used for ci/cd on multiple clusters.
 | ENVIRONMENT           | Environment Name.                                       | `staging`                                  |
 | CLUSTER_NAME          | Cluster Name.                                           | `webit`                                    |
 | GET_ALL               | Flag To Get All Clusters.                               | `true\false`                               |
+
+# New version
+git tag x.x.x
+git push --tags
