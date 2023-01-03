@@ -7,5 +7,6 @@ This will be used for ci/cd on multiple clusters.
 
 | Variable              | Details                                                 | Example                                    |
 |-----------------------|---------------------------------------------------------|--------------------------------------------|
-| ENVIRONMENT           | AWS Access Key for security group authorization.        | `staging`                                  |
-| CLUSTER_NAME          | AWS Secret Access Key for security group authorization. | `webit`                                    |
+| ENVIRONMENT           | Environment Name.                                       | `staging`                                  |
+| CLUSTER_NAME          | Cluster Name.                                           | `webit`                                    |
+| GET_ALL               | Flag To Get All Clusters.                               | `true\false`                               |
